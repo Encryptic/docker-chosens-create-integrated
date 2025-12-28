@@ -8,7 +8,7 @@ ENV PACK_ID=${PACK_ID}
 ARG PACK_VERSION=7386061
 ENV PACK_VERSION=${PACK_VERSION}
 
-RUN apt-get update && apt-get install -y curl unzip && \
+RUN apt-get update && apt-get install -y curl unzip jq && \
     adduser --uid 99 --gid 100 --home /data --disabled-password minecraft && \
     curl -JL -o server_files.zip "https://www.curseforge.com/api/v1/mods/${PACK_ID}/files/${PACK_VERSION}/download" && \
     mkdir -p /modpack && mkdir -p /logs && \
