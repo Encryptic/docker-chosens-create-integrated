@@ -2,10 +2,10 @@
 
 FROM eclipse-temurin:21-jdk-noble
 
-LABEL version="1.3.2"
+LABEL version="1.3.3"
 ARG PACK_ID=1409114
 ENV PACK_ID=${PACK_ID}
-ARG PACK_VERSION=7438136
+ARG PACK_VERSION=7439069
 ENV PACK_VERSION=${PACK_VERSION}
 
 RUN apt-get update && apt-get install -y curl unzip jq && \
